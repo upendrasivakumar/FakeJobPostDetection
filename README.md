@@ -1,20 +1,23 @@
-# FAKE-JOB-POST-DETECTION
+#🚀 Fake Job Post Detection
+
 A machine learning project to detect fake job postings using NLP, EDA, and classification models.
-🚀 Fake Job Post Detection
-📌 Project Overview
 
-Online recruitment platforms are flooded with both genuine and fraudulent job postings. Fake jobs can lead to financial scams and misuse of personal data.
-This project applies Machine Learning (ML) techniques to detect fake job postings based on job descriptions and related features.
+🔗 Live Demo (Deployment): https://fake-job-post-detection-3.onrender.com
 
-🎯 Objectives
+#📌 Project Overview
 
-Build a classification model to detect fake job posts.
+Online job portals contain both genuine and fraudulent listings. Fake postings often lead to scams or misuse of personal data.
+This project uses Machine Learning to classify job posts as real or fake using text features and metadata.
 
-Perform EDA (Exploratory Data Analysis) to identify patterns in fraudulent jobs.
+#🎯 Objectives
 
-Apply text cleaning, vectorization (TF-IDF), and feature engineering.
+Build an ML classification model for fake job detection
 
-Train and evaluate multiple ML models:
+Perform EDA to identify fraud patterns
+
+Apply text cleaning & TF-IDF vectorization
+
+Train models:
 
 Logistic Regression
 
@@ -24,60 +27,66 @@ Decision Tree
 
 Random Forest
 
-Support Vector Machine (SVM)
+SVM
 
 XGBoost
 
-Compare model performance and select the best fit model.
+Compare performance and select the best model
 
-Save the final model and vectorizer for deployment-ready predictions.
+Save model & vectorizer for deployment
 
-📊 Dataset
+#📊 Dataset
 
-Dataset size: 6,841 job postings × 18 features
+Size: 6,841 job postings × 18 features
 
-Target column: fraudulent (0 = real, 1 = fake)
+Target: fraudulent (0 = real, 1 = fake)
 
 Features:
 
-Text fields (title, company_profile, description, requirements, benefits)
+Text: title, company_profile, description, requirements, benefits
 
-Numeric fields (telecommuting, has_company_logo, has_questions, etc.)
+Numeric: telecommuting, has_company_logo, has_questions, etc.
 
-⚙️ Steps Performed
+#⚙️ Steps Performed
 
-Data Cleaning – removed missing labels, cleaned text, combined relevant fields.
+Data cleaning & preprocessing
 
-EDA – missingness analysis, correlation heatmap, target distribution.
+EDA (distribution plots, correlations, missing analysis)
 
-Feature Engineering – TF-IDF vectorization with unigrams & bigrams.
+TF-IDF feature engineering
 
-Model Training – tested 6 ML algorithms.
+Model training & evaluation
 
-Cross-Validation – stratified 5-fold validation.
+5-fold cross-validation
 
-Evaluation – accuracy, precision, recall, F1-score, ROC-AUC, confusion matrix.
+Hyperparameter tuning (GridSearchCV)
 
-Hyperparameter Tuning – light tuning with GridSearchCV.
+Deployment using the best model
 
-Final Model – Tuned XGBoost achieved the best performance.
-
-📈 Results
+#📈 Results
 
 Best Model: Tuned XGBoost
 
-Performance: Achieved the highest F1-score and ROC-AUC compared to other models.
+Metrics: Highest F1-score & ROC-AUC
 
 Example Predictions:
 
-"Work from home, $5000/week, send bank details" → FAKE
+“Work from home, $5000/week, send bank details” → FAKE
 
-"Infosys hiring Software Engineer via official portal" → REAL
+“Infosys hiring Software Engineer via official portal” → REAL
 
-🛠️ Tech Stack
+#🛠️ Tech Stack
 
 Python
 
-Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost
+Pandas, NumPy
 
-Visualization: Confusion Matrix, ROC Curves, Precision-Recall Curves
+Matplotlib, Seaborn
+
+Scikit-learn
+
+XGBoost
+
+Deployment: Render
+
+Visualizations: Confusion Matrix, ROC, Precision-Recall curves
